@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,6 +24,8 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+
+
 
 body {
 	line-height: 1;
@@ -152,9 +155,22 @@ input, select, textarea {
 		color: inherit;
 	}
 
-		a:hover {
+		a:not(.no-effect):hover {
 			border-bottom-color: transparent;
+			color: #1d75c7;
+			letter-spacing: 2.0em;
+			animation-name: spread-letters;
+  			animation-duration: 0.5s;			
 		}
+
+		@keyframes spread-letters {
+			0% {
+			  letter-spacing: 0.5em;
+			}
+			100% {
+			  letter-spacing: 2.0em;
+			}
+		  }
 
 	strong, b {
 		color: #ffffff;
@@ -211,6 +227,8 @@ input, select, textarea {
 
 	h4 {
 		font-size: 0.8rem;
+		text-shadow: 0 0 10px #2dccc4, 0 0 20px #9edd39, 0 0 30px #535ebd, 0 0 40px #9e6cb6, 0 0 70px #ff00de, 0 0 80px #ac4f76, 0 0 100px #ff00de, 0 0 150px #ff00de;
+		  
 	}
 
 	h5 {
@@ -261,6 +279,7 @@ input, select, textarea {
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
+		
 	}
 
 	pre {
