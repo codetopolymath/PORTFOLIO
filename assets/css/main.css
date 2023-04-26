@@ -154,8 +154,8 @@ input, select, textarea {
 		text-decoration: none;
 		color: inherit;
 	}
-
-		a:not(.no-effect):hover {
+		/* expand effect */
+		a.expand:not(.no-effect):hover {
 			border-bottom-color: transparent;
 			color: #1d75c7;
 			letter-spacing: 2.0em;
@@ -171,7 +171,31 @@ input, select, textarea {
 			  letter-spacing: 2.0em;
 			}
 		  }
+		
+		  /* neon effect */
+		
+		a:hover.neon-effect {
+			animation: neon-blink 1s ease-in-out infinite alternate;
+		}
+		
+		@keyframes neon-blink {
+			from {
+				text-shadow: 0px 0px 10px #fff,
+							 0px 0px 20px #fff,
+							 0px 0px 30px #0ff,
+							 0px 0px 40px #0ff,
+							 0px 0px 50px #0ff;
+			}
+			to {
+				text-shadow: 0px 0px 10px #fff,
+							 0px 0px 20px #fff,
+							 0px 0px 30px #f0f,
+							 0px 0px 40px #f0f,
+							 0px 0px 50px #f0f;
+			}
+		}
 
+		
 	strong, b {
 		color: #ffffff;
 		font-weight: 600;
